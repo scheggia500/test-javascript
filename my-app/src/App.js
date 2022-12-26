@@ -1,14 +1,19 @@
 import { useState } from 'react';
-import logo from './sonic.png';
+import logo from './cat.gif';
 import './App.css';
 import { division } from './Calculator';
 import { addition } from './Calculator';
+import { subtraction } from './Calculator';
+import { multiplication } from './Calculator';
+
 
 function App() {
   const [number1, setNumber1] = useState();
   const [number2, setNumber2] = useState();
   const result = division(number1, number2);
   const result2 = addition(number1, number2);
+  const result3 = subtraction(number1, number2);
+  const result4 = multiplication(number1, number2);
   
   
   return (
@@ -33,6 +38,8 @@ function App() {
         <p>number2: {number2}</p>
         <p>division: {result || 'error'}</p>
         <p>addition: {result2 || '0'}</p>
+        <p>subtraction: {result3 || '0'}</p>
+        <p>multiplication: {result4 || '0'}</p>
         
       </header>
     </div>
